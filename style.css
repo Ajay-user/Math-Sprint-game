@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium&family=PT+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: PT Mono, sans-serif;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e5dbe1;
+  background-image: url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 70 70' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ac9c92' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 0h35v35H0V0zm5 5h25v25H5V5zm5 5h15v15H10V10zm5 5h5v5h-5v-5zM40 5h25v25H40V5zm5 5h15v15H45V10zm5 5h5v5h-5v-5zM70 35H35v35h35V35zm-5 5H40v25h25V40zm-5 5H45v15h15V45zm-5 5h-5v5h5v-5zM30 40H5v25h25V40zm-5 5H10v15h15V45zm-5 5h-5v5h5v-5z'/%3E%3C/g%3E%3C/svg%3E");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* game - container  */
+.game-container {
+  height: 405px;
+  border-radius: 5px;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 2px 30px 2px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+/* common header */
+.header {
+  text-align: center;
+  margin: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: lightblue;
+}
+
+/* splash-page */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  align-items: center;
+}
+
+.radio-inputs {
+  margin: 10px;
+  height: 50px;
+  width: 300px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid white;
+}
+
+.radio-inputs:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+input[type="radio"] {
+  height: 50px;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid black;
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+}
+
+label {
+  position: absolute;
+  top: 12px;
+  margin: 5px;
+}
+
+.score-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.submit-button button {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-family: Oxanium, sans-serif;
+  font-size: 20px;
+  color: white;
+  background-color: salmon;
+}
+
+.submit-button button:hover {
+  filter: brightness(110%);
+}
+/* countdown page */
+.countdown-container {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 75%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+/* game page */
+.game-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.active-bar {
+  width: 96%;
+  height: 50px;
+  background-color: lightseagreen;
+  opacity: 0.4;
+  position: absolute;
+  top: 100px;
+}
+
+.display-game {
+  width: 96%;
+  height: 250px;
+  background-color: rgba(255, 255, 255, 0.5);
+  overflow: scroll;
+}
+.display-game::-webkit-scrollbar {
+  display: none;
+}
+.game-item {
+  display: flex;
+  align-items: center;
+  height: 49px;
+  border: 1px solid black;
+  border-bottom: none;
+  padding-left: 10px;
+  font-size: 30px;
+  font-family: "Just Another Hand", sans-serif;
+  letter-spacing: 1px;
+}
+.game-item:last-child {
+  border-bottom: 1px solid black;
+}
+
+.choice {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.choice button {
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  font-family: Oxanium, sans-serif;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: white;
+}
+.choice button:hover {
+  filter: brightness(110%);
+}
+.right {
+  background-color: lightseagreen;
+}
+.wrong {
+  background-color: salmon;
+}
+
+/* results-page */
+.result-contanier {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 25px;
+}
+
+.time {
+  color: lightseagreen;
+}
+
+.result-time-details h4 {
+  margin: 10px;
+}
+
+.penality {
+  color: red;
+}
+
+.play-again-button {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  height: 30px;
+}
+
+.play-again-button button {
+  width: 90%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: lightseagreen;
+  color: white;
+  font-size: 20px;
+  font-family: Oxanium, sans-serif;
+}
+
+.play-again-button button:hover {
+  filter: brightness(110%);
+}
+
+/* mobile device */
+@media screen and (max-width: 400px) {
+  .game-container {
+    width: 95vw;
+    height: 450px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .radio-inputs {
+    width: 86vw;
+  }
+}

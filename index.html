@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <title>Math Sprint</title>
+  </head>
+  <body>
+    <!-- game container  -->
+    <div class="game-container">
+      <!-- header -->
+      <div class="header">
+        <h1 class="header">Math Sprint Game</h1>
+      </div>
+      <!-- splash-page -->
+      <div class="card" id="splash-page">
+        <div class="form-container">
+          <form>
+            <div class="radio-inputs">
+              <label for="10-question">10-Question</label>
+              <input type="radio" name="question" id="10-question" value="10" />
+              <span class="score-info"
+                ><span class="text">Best Score</span
+                ><span class="best-score">0.0</span>
+              </span>
+            </div>
+            <div class="radio-inputs">
+              <label for="25-question">25-Question</label>
+              <input type="radio" name="question" id="25-question" value="25" />
+              <span class="score-info"
+                ><span class="text">Best Score</span
+                ><span class="best-score">0.0</span>
+              </span>
+            </div>
+            <div class="radio-inputs">
+              <label for="50-question">50-Question</label>
+              <input type="radio" name="question" id="50-question" value="50" />
+              <span class="score-info"
+                ><span class="text">Best Score</span
+                ><span class="best-score">0.0</span>
+              </span>
+            </div>
+            <div class="radio-inputs">
+              <label for="99-question">99-Question</label>
+              <input type="radio" name="question" id="99-question" value="99" />
+              <span class="score-info"
+                ><span class="text">Best Score</span
+                ><span class="best-score">0.0</span>
+              </span>
+            </div>
+            <div class="submit-button">
+              <button type="submit">Start-round</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- countdown-page -->
+      <div class="countdown-page" id="countdown-page">
+        <div class="countdown-container">
+          <h1 class="countdown" id="countdown">3</h1>
+        </div>
+      </div>
+
+      <!-- game page -->
+      <div class="game-page" id="game-page" hidden>
+        <div class="game-page-container">
+          <div class="active-bar"></div>
+          <div class="display-game" id="display-game">
+            <!-- <div class="game-item">3*3=9</div>
+            <div class="game-item">3*3=9</div>
+            <div class="game-item">3*3=9</div> -->
+          </div>
+        </div>
+        <div class="choice">
+          <button class="right" id="right" onclick="select(true)">Right</button>
+          <button class="wrong" id="wrong" onclick="select(false)">
+            Wrong
+          </button>
+        </div>
+      </div>
+
+      <!-- results page -->
+      <div class="results-page" id="results-page" hidden>
+        <div class="result-contanier">
+          <h2 class="your-time">Your Time</h2>
+          <h1 class="time" id="final-time">4.20s</h1>
+          <div class="result-time-details">
+            <h4 class="base-time" id="base-time">Base time : 2.20s</h4>
+            <h4 class="penality" id="penality-time">Penality : 2.00s</h4>
+          </div>
+        </div>
+        <div class="play-again-button">
+          <button class="play-again" id="play-again" hidden>Play again</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script src="script.js"></script>
+  </body>
+</html>
